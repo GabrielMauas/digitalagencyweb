@@ -1,0 +1,68 @@
+@import "./index.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+} 
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+  background-color: $white;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: $font-primary;
+  // overflow: hidden;
+
+}
+
+a:link,
+a:active,
+a:visited {
+  // text-decoration: none;
+  background-color: transparent;
+}
+
+h1, h2 {
+  font-size: $xxl;
+  font-weight: $black;
+  color: $dark;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+button {
+  padding: 0;
+  outline: none;
+}
+button:active,
+button:focus {
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: $white;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $dark;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $white;
+  border-radius: 10px;
+}
+

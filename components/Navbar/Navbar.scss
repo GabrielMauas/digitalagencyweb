@@ -1,0 +1,169 @@
+.navbar{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 10rem;
+    box-shadow: $shadow1;
+    @include MediaQuery($sm-screen){
+        box-shadow: none;
+        display: block;
+        padding: 2rem;
+    }
+    z-index: 90;
+    background-color: $white;
+
+    & h1{
+        // margin-left: 6rem;
+        color: darken($color: $primary, $amount: 15);
+        @include MediaQuery($sm-screen){
+            font-size: $m;
+            padding: 1rem 0;
+        }
+    }
+    & span {
+        color: $dark;
+    }
+    &__contact {
+        background-color: transparent;
+        display: block;
+        border: .1rem solid $dark;
+        padding: 0 2rem;
+        font-size: $sm;
+        box-shadow: $shadow1;
+        font-weight: $medium;
+        &:hover {
+            background-color: $dark;
+            color: $white;
+            border-color: white;
+            transform: scale(0.98);
+            transition: ease-in-out .2s;
+        }
+        &:active {
+            transform: scale(0.96);
+        }
+        @include MediaQuery($sm-screen){
+            display: none;
+        }
+    }
+    &__button {
+        display: none;
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        background-color: $primary;
+        width: 5rem;
+        height: 5rem;
+        border-radius: $radius;
+        border: .1rem solid $dark;
+        box-shadow: $shadow1;
+        cursor: pointer;
+        z-index: 95;
+        &:active {
+            transform: scale(0.96);
+        }
+
+        & div::before{
+            content: "";
+            position: absolute;
+            top: 2.5rem;
+            left: .9rem;
+            width: 3rem;
+            height: .13rem;
+            background-color: $dark;
+            z-index: 2;
+            transform: translateY(-5px);
+            transition: ease .3s;
+        }
+        & div::after{
+            content: "";
+            position: absolute;
+            top: 2.5rem;
+            left: .9rem;
+            width: 3rem;
+            height: .13rem;
+            background-color: $dark;
+            z-index: 2;
+            transform: translateY(5px);
+            transition: ease .3s;
+        }
+        & div.active::before {
+            transform: translateY(0px) rotate(45deg);
+        }
+        & div.active::after {
+            transform: translateY(0px) rotate(-45deg);
+        }
+
+
+
+        @include MediaQuery($sm-screen){
+            display: block;
+        }
+    }
+    &__mobile {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 75%;
+        background-color: $dark;
+        height: 100vh;
+        transition: ease-in-out .2s;
+        padding: 2rem;
+        z-index: 90;
+
+        &.active {
+            left: 0;
+        }
+        & span {
+            color: $white;
+        }
+        @include MediaQuery($sm-screen) {
+            display: block;
+        }
+    }
+    &__list {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        color: $white;
+        list-style: none;
+        font-size: 2.5rem;
+        font-weight: $extra-bold;        
+        & li {
+            margin: 2.5rem 0;
+            transition: ease .2s;
+            cursor: pointer;
+        }
+        & a {
+            color: $white;
+            text-decoration: none;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+    &__bg {
+        // display: none;
+        left: -100%;
+        &.active{
+            @include MediaQuery($sm-screen) {
+                left: 0;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100vw;
+                height: 1000vh;
+                z-index: -1;
+                // background-color: $white;
+                backdrop-filter: blur(4px);
+                transition: .2s ease-in-out;
+            
+            }
+
+        }
+    }
+    
+}

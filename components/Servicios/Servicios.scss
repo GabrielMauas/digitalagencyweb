@@ -1,0 +1,92 @@
+.servicios {
+    position: relative;
+    top: 10rem;
+    height: 100vh;
+    display: grid;
+    // grid-template-columns: 55% 45%;
+    grid-template-columns: 100%;
+    grid-template-areas: "layout  content";
+    @include MediaQuery($sm-screen) {
+        grid-template-columns: 100%;
+    }
+
+    &__content {
+
+        grid-area: content;
+
+        @include MediaQuery($sm-screen) {
+            z-index: 3;
+        }
+        & h2 {
+            font-size: 4rem;
+            text-align: center;
+            margin-top: 2rem;
+            @include MediaQuery($sm-screen) {
+                display: none;
+            }
+        }
+        
+    }
+
+    &__layout {
+        grid-area: layout;
+        display: grid;
+        background-color: darken($color: $white, $amount: 5);
+        color: $dark;
+        padding: 4rem;
+        @include MediaQuery($sm-screen) {
+            padding: 0;
+        }
+        & h2 {
+            display: none;
+            color: $dark;
+            text-align: center;
+            font-size: 3.5rem;
+            margin-top: 5rem;
+            @include MediaQuery($sm-screen) {
+                display: block;
+            }
+        }
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 2rem;
+        @include MediaQuery($sm-screen) {
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 2rem;
+        margin: 4rem 0;
+        padding: 0 5rem;
+        @include MediaQuery($sm-screen) {
+            padding: 0;
+        }
+        & h3{
+            margin: 2rem;
+            font-size: 3rem;
+            font-weight: $black;
+        }
+        & p {
+            font-weight: $light;
+            line-height: 1.5;
+        }
+    }
+
+    &__link {
+        margin-top: 1rem;
+        cursor: pointer;
+        color: $dark;
+        &:hover {
+            font-weight: $semi-bold;
+        }
+    }
+
+}

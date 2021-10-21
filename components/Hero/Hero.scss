@@ -1,0 +1,111 @@
+.hero {
+    position: relative;
+    height: 120vh;
+    @include MediaQuery($sm-screen){
+        height: 100vh;
+    }
+    &__content {
+        position: absolute;
+        top: 10rem;
+        height: 80vh;
+        padding: 7rem 7rem;
+        width: 75%;
+        
+
+        @include MediaQuery($sm-screen){  
+            top: 8rem;
+            text-align: center;
+            width: 100%;
+            padding: 4rem 3rem;
+        }
+
+        & p {
+            line-height: 1.5;
+            @include MediaQuery($sm-screen) {
+                font-size: $sm;
+                padding: 2rem .5rem;
+            }
+        }
+    }
+    
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -4rem;
+        right: -10rem;
+        width: 65%;
+        height: 50%;
+        background-color: $primary;
+        z-index: -1;
+        transform: rotate(20deg);
+        box-shadow: $shadow2;
+        display: block;
+
+        @include MediaQuery($sm-screen){
+            display: none;
+        }
+
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 6rem;
+        right: -10rem;
+        width: 60%;
+        height: 50%;
+        background-color: $primary;
+        z-index: -1;
+        transform: rotate(20deg);
+        box-shadow: $shadow2;
+        display: block;
+
+        @include MediaQuery($sm-screen){
+            display: none;
+        }
+    }
+
+    
+
+    &__text {
+        font-size: $sm;
+        font-weight: $light;
+        margin-top: 2rem;
+
+    }
+    &__button {
+        padding: 1.5rem 3rem;
+        border: .1rem solid $dark;
+        font-weight: $semi-bold;
+        font-size: $m;
+        background-color: $primary;
+        box-shadow: $shadow1;
+        margin-top: 5rem;
+        transition: ease .3s;
+        // left: 7rem;
+        // right: 25%;
+        text-align: center;
+        & a {
+            color: $dark;
+            text-decoration: none;
+        }
+    
+        &:hover{
+            background-color: $dark;
+            border-color: $white;
+            color: $white;
+            transform: scale(0.98);
+            & a {
+                color: $white;
+            }
+            
+        }
+        &:active{
+            transform: scale(0.96);
+        }
+
+        @include MediaQuery($sm-screen) {
+            border-radius: $radius;
+        }
+    }
+}

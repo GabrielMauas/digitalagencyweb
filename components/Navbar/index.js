@@ -30,7 +30,7 @@ function Navbar() {
                         </a>
                     </li>
                     <li>
-                        <a href="contacto"> 
+                        <a href="#contacto"> 
                             Contacto
                         </a>
                     </li>

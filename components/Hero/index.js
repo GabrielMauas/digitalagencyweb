@@ -9,7 +9,9 @@ function Hero() {
                     Somos una agencia digital que brinda soluciones digitales a emprendedores y profesionales. 
                     Trabajamos lado a lado con nuestros clientes para satsifacer todos sus requisitos. 
                 </p>
-                <button className='hero__button'><Link href="#servicios" replace>Conoce más</Link></button>
+                <div className='hero__btncont'>
+                    <button className='hero__button'><Link href="#servicios" replace>Conoce más</Link></button>
+                </div>
             </div>
             
         </div>

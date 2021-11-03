@@ -1,29 +1,33 @@
 .hero {
-    position: relative;
-    height: 120vh;
+    // position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include MediaQuery($sm-screen){
         height: 100vh;
     }
     &__content {
-        position: absolute;
-        top: 10rem;
+        // position: absolute;
+        // top: 10rem;
         height: 80vh;
-        padding: 7rem 7rem;
-        width: 75%;
+        padding: 9rem 7rem;
+        width: 100%;
         
-
         @include MediaQuery($sm-screen){  
-            top: 8rem;
-            text-align: center;
+            // top: 8rem;
+            text-align: justify;
             width: 100%;
-            padding: 4rem 3rem;
+            padding: 4rem 1rem;
         }
-
-        & p {
-            line-height: 1.5;
+        & h1 {
+            font-size: 8rem;
+            color: #111;
+            text-align: center;
+            padding-top: 5rem;
             @include MediaQuery($sm-screen) {
-                font-size: $sm;
-                padding: 2rem .5rem;
+                font-size: 5rem;
+                padding-top: 7rem;
             }
         }
     }
@@ -40,7 +44,7 @@
         z-index: -1;
         transform: rotate(20deg);
         box-shadow: $shadow2;
-        display: block;
+        display: none;
 
         @include MediaQuery($sm-screen){
             display: none;
@@ -58,7 +62,7 @@
         z-index: -1;
         transform: rotate(20deg);
         box-shadow: $shadow2;
-        display: block;
+        display: none;
 
         @include MediaQuery($sm-screen){
             display: none;
@@ -71,15 +75,28 @@
         font-size: $sm;
         font-weight: $light;
         margin-top: 2rem;
+        line-height: 1.5;
+        text-align: center;
+        color: #666;
+        @include MediaQuery($sm-screen) {
+            font-size: $sm;
+            padding: 1rem;
+        }
 
     }
+    &__btncont {
+        display: grid;
+        place-content: center;
+    }
     &__button {
-        padding: 1.5rem 3rem;
-        border: .1rem solid $dark;
-        font-weight: $semi-bold;
-        font-size: $m;
-        background-color: $primary;
-        box-shadow: $shadow1;
+        border-radius: 1rem;
+        padding: 1.6rem 4.5rem;
+        // border: .1rem solid $dark;
+        border: none;
+        font-weight: 600;
+        font-size: 3.5rem;
+        background-color: $primary-dark;
+        box-shadow: 0px 4px 14px 0 rgba(0, 0, 0, 40%);
         margin-top: 5rem;
         transition: ease .3s;
         // left: 7rem;

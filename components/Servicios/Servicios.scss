@@ -31,7 +31,7 @@
     &__layout {
         grid-area: layout;
         display: grid;
-        background-color: darken($color: $white, $amount: 5);
+        background-color: $white-darken;
         color: $dark;
         padding: 4rem;
         @include MediaQuery($sm-screen) {

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Gabriel Mauas | ASESORÍA GRATUITA</title>
+        <title>GM Digital | ASESORÍA GRATUITA</title>
         <meta name="description" content="Desarrollos Web | Construimos los sitios que construyen tu negocio." />
         <link rel="icon" href="/favicon.ico" />
       </Head>

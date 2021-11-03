@@ -6,7 +6,10 @@ import grid from '../../public/grid.svg';
 // import statistics from '../../public/statistics.svg';
 import shoppingCart from '../../public/shoppingCart.svg';
 import stats from '../../public/stats.svg';
-
+import webpage from '../../public/webpage.png';
+import website from '../../public/website.png';
+import ecommerce from '../../public/ecommerce.png';
+import seoreport from '../../public/seoreport.png';
 
 function Servicios() {
 
@@ -25,10 +28,10 @@ function Servicios() {
             <div className='servicios__layout'>
                 <h2>Nuestros Servicios</h2>
                 <div className='servicios__cards'>
-                    <Servicio icon={monitor} title="Sitios Corporativos" text={desc} />
-                    <Servicio icon={grid} title="Portfolios" text={desc} />
-                    <Servicio icon={shoppingCart} title="E-Commerce" text={desc} />
-                    <Servicio icon={stats} title="SEO" text={desc} />
+                    <Servicio icon={website} title="Sitios Corporativos" text={desc} />
+                    <Servicio icon={webpage} title="Landing Page" text={desc} />
+                    <Servicio icon={ecommerce} title="E-Commerce" text={desc} />
+                    <Servicio icon={seoreport} title="SEO" text={desc} />
                 </div>
             </div>
 
